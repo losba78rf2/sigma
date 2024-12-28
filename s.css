@@ -64,12 +64,28 @@ button{
     animation: pulse 2s infinite;
 }
 
+@keyframes bg{
+    0%, 100%{
+        filter: invert(0%);
+        background-position:0% 50% ;
+    }
+    50%{
+        filter: invert(100%);
+        background-position:50% 100% ;
+    }
+}
+
 body{
-    overflow: hidden;
+    
+    background:url(https://th.bing.com/th/id/OIP.rM8t0CGxBDN6eaJGgJyJwAHaEc?rs=1&pid=ImgDetMain) ;
+    
+    background-size:300%;
+    animation: bg 5ms infinite;
 }
 
 @keyframes ahw{
     0%, 75%, 100%{
+        
       opacity: 0 ;
       transform: translateY(100%) ;
     }
@@ -77,12 +93,13 @@ body{
     12.5%, 62.5%{
         opacity:1;
         transform: translateY(0);
+       
     }
 }
 
 
 .notf{
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     left: 20px;
     background-color: aquamarine;
@@ -90,5 +107,24 @@ body{
     border-radius: 10px;
     transform: translateY(100%);
     opacity: 0;
-    animation: ahw 82 linear infinite;
+    color: white;
+    animation: ahw 8s linear infinite;
+}
+@keyframes er{
+    0%, 100%{
+        filter: contrast(0%);
+        
+        color: #ff0000;
+    }
+
+    50%{
+        
+        filter: contrast(3000000%);
+        color: #48ff00;
+    }
+}
+.rgb{
+    background-color: red;
+    color: white;
+    animation: er 2s infinite;
 }
